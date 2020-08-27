@@ -1,0 +1,622 @@
+body {
+	background-color:#2d2c2c;
+	width:100%;
+	margin:0;
+	padding:0;
+	text-align: center;
+	font-family: 'Open Sans', Calibri, sans-serif;
+	color:black;
+	overflow-y:scroll;
+}
+
+/* Font Styling */
+h1, h2, h3, h4, #footer a:link, #footer a:visited {
+	font-family: 'Domine', Georgia, Times New Roman, serif;
+	text-transform:uppercase;
+	font-weight:700;
+	color:#DAB6FC;
+	letter-spacing:.2em;
+}
+
+#secondary h1, #secondary h2, #secondary h3 {
+	color:#5D1C9E;
+	text-transform:none;
+	letter-spacing:.08em;
+}
+
+#secondary {
+	color:#5D1C9E;
+}
+
+#ticket-form h3 {
+	font-family: 'Open Sans', Calibri, sans-serif;
+	font-weight:700;
+	letter-spacing:.05em;
+	color:#DAB6FC;
+}
+
+.smalltext {
+	font-size: 0.5em;
+}
+
+#title a:link, #title a:visited, #title2 a:link, #title2 a:visited {
+	font-family: 'Domine', Georgia, Times New Roman, serif;
+	font-size:1.1em;
+	color:#5D1C9E;
+	letter-spacing:0.1em;
+}
+
+#title a:hover, #title2 a:hover {
+	color:#00542D;
+	background:none;
+}
+
+#title2 {
+	display:none;
+}
+
+a:link, a:visited {
+	color:#5D1C9E;
+}
+
+a:hover {
+	background-color:rgba(26, 26, 26, .8);
+	color:white;
+}
+
+
+#footer a:hover {
+	color:white;
+}
+
+/* Placeholder text color */
+::-webkit-input-placeholder {
+	color:#DAB6FC;
+}
+::-moz-placeholder {
+	color:#DAB6FC;
+}
+:-ms-input-placeholder {
+	color:#DAB6FC;
+}
+:-moz-placeholder {
+	color:#DAB6FC;
+}
+
+.animal-description {
+	color:white;
+}
+
+.animal-image-credit {
+	font-family:'Domine', Georgia, Times New Roman, serif;
+	font-size:0.9em;
+	color:#00542D;
+}
+
+/* Sections: Container, Main, Secondary, Footer; */
+
+#container {
+	background-color: white;
+	margin: 0 10%;
+	text-align:left;
+}
+
+#main {
+	border-radius: 0px 0px 30px 0px;
+	padding:1em;;
+}
+
+#main, #footer, #order-information {
+	background-color:#1A1A1A;
+	color:white;
+
+}
+
+#secondary {
+	background-color: white;
+	padding:1em;
+}
+
+#footer {
+	font-size:2.0em;
+	text-align:center;
+	margin:0;
+	padding:0.005em;
+}
+
+/* Horizontal Navigation Bar Styling */
+#nav-bar {
+	display:grid;
+	grid-template-columns: 95% 5%;
+	background-color:none;
+	position:fixed;
+	top:0;
+	left:10%;
+	right:10%;
+	z-index:9999;
+}
+
+#nav-space {
+	width:100%;
+}
+
+#navigation {
+	background-color:rgba(255, 255, 255, 0.9);
+	border-radius: 0px 0px 10px 10px;
+	border: 2px solid #adadad;
+	font-weight:700;
+	text-transform:uppercase;
+}
+
+#navigation ul {
+	display:flex;
+	list-style-type: none;
+	margin:0;
+	padding:0;
+}
+
+#navigation li {
+	display: inline;
+}
+
+#navigation a:link, #navigation a:visited {
+	text-decoration:none;
+	display: block;
+	padding: .7em;
+}
+
+.keep-left {
+	margin-right:auto;
+}
+
+/* Current page has special menu color */
+.current-page {
+	background-color:rgba(0, 84, 45, .7);
+}
+
+.current-page a:link, .current-page a:visited {
+	color:white;
+}
+
+/* Home page: Top Grid */
+#top-bar {
+	display:grid;
+	grid-template-columns: 95% 5%;
+	background-color:#1A1A1A;
+}
+
+
+/* Image Carousel */
+/* Credit from : https://www.w3schools.com/howto/howto_js_slideshow.asp; */
+
+#carousel, #header-image {
+	max-width: 100%;
+	position: relative;
+	margin: auto;
+	background-color:#1A1A1A;
+}
+
+#carousel img, #header-image img {
+	width:100%;
+	border-radius: 0px 0px 30px 0px;
+
+}
+
+.slide {
+	display:none;
+}
+
+.previous, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -1.375em;
+	padding: 1em;
+	color:white;
+	font-weight:bold;
+	font-size:1.125em;
+	transition: 0.6s ease;
+	border-radius: 0 0.1875em 0.1875em 0;
+	user-select: none;
+}
+
+/* Arrow buttons to navigate carousel */
+.next {
+	right: 0;
+	border-radius: 0.1875em 0 0 0.1875em;
+}
+
+.previous:hover, .next:hover {
+	background-color: rgba(0,0,0,0.8);
+}
+
+/* Carousel captions */
+.caption {
+	padding: 0.5em 0.75em;
+	position: absolute;
+	color:white;
+	bottom: 0.5em;
+	background-color:#1A1A1A;
+}
+
+/* Fade animation */
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration:4.0s;
+	animation-name: fade;
+	animation-duration:4.0s;
+}
+
+@-webkit-keyframes fade {
+	from {opacity: .6}
+	to {opacity:1}
+}
+
+@keyframes fade {
+	from {opacity: .6}
+	to {opacity: 1}
+}
+
+/* Short-headers */
+#short-header, #short-header-2{
+	height:350px;
+	background:#1e1d1d;
+	border-radius: 0px 0px 30px 0px;
+}
+
+#short-header {
+	background-image: url("pics/chuttersnap-unsplash.jpg");
+	background-size:cover;
+}
+
+#short-header-2 {
+	background-image: url("pics/shireah-ragnar-unsplash.jpg");
+	background-size:cover;
+	background-position:center;
+}
+
+.short-credit {
+    height:350px;
+    width:100%;
+    position:relative;
+}
+
+.short-credit-text {
+	position:absolute;
+	bottom:1.2em;
+	right:0;
+	background:rgba(0,0,0,0.8);
+	color:white;
+	padding:.1em;
+	padding-right:2em;
+	padding-left:1em;
+}
+
+
+/* Form on Ticket Page */
+#ticket-form {
+	display:grid;
+	grid-template-columns: 50% 50%;
+}
+#ticket-form .button {
+	border:none;
+	background-color:#00542D;
+	color: white;
+	font-weight:400;
+	letter-spacing:0.1em;
+	padding-top:0.8em;
+	padding-bottom:0.8em;
+	padding-right: 2.5em;
+	padding-left: 2.5em;
+	border-radius:5em;
+	margin-top:2em;
+	margin-left:1em;
+	margin-right:1em;
+}
+
+#ticket-form .button:hover {
+	background-color:#DAB6FC;
+	font-weight:400;
+	color:#1A1A1A;
+	cursor:pointer;
+}
+
+#order-information {
+	margin:1em;
+	padding:1em;
+	border-radius:1.875em;
+	color:#DAB6FC;
+}
+
+#order-information input {
+	background:none;
+	color:#DAB6FC;
+	padding:0.5em;
+	margin:0.5em;
+	border-radius:2px 2px 2px 2px;
+}
+
+#order-information input[type=text],
+ #order-information input[type=date]{
+	border:none;
+	border-bottom:1px solid #DAB6FC;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width:100%;
+}
+
+/* Remove highlighting when typing in form */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline:none;
+}
+
+#form-results {
+	padding:0.5em;
+	margin:0.5em;
+	text-align:center;
+}
+
+#image-result {
+	max-width: 100%;
+	width:auto;
+	height:auto;
+	border:3px dashed #1A1A1A;
+}
+
+/* Invert Calendar Icon in Date Form */
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+/* Radio Button Styling */
+/* Based on https://www.w3schools.com/howto/howto_css_custom_checkbox.asp*/
+.radio-container {
+    position: relative;
+    padding-left: 2.1875em;
+    margin: 0.75em;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Remove normal radio input */
+.radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.check-radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1em;
+	width: 1em;
+    border: 0.3em solid #DAB6FC;
+    background-color: #1A1A1A;
+    border-radius: 50%;
+}
+
+.radio-container:hover input ~ .check-radio {
+    background-color: #1A1A1A;
+    border-color:white;
+}
+
+.radio-container input:checked ~ .check-radio {
+    background-color: #1A1A1A;
+    border-color:#00542D;
+}
+
+/* Selected indicator on radio */
+.check-radio:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio-container input:checked ~ .check-radio:after {
+  display: block;
+}
+
+.radio-container .check-radio:after {
+ 	top: 0.2em;
+	left: 0.205em;
+	width: 0.6em;
+	height: 0.6em;
+	border-radius: 50%;
+	background: #00542D;
+}
+
+/* Map - Download Button Styling */
+#price-map-wrap {
+	display:grid;
+	grid-template-columns: 50% 50%;
+	vertical-align:middle;
+}
+
+#map-download {
+	text-align:right;
+}
+
+#map-download .button {
+	height:100%;
+	border:none;
+	background:rgba(255, 255, 255, 0.9);
+	color:#5D1C9E;
+	font-size:1.6em;
+	padding:1.5em;
+	font-weight:700;
+	letter-spacing:0.1em;
+	text-transform:uppercase;
+	border-radius:0.8em;
+	text-align:center;
+}
+
+#map-download .button:hover {
+	background: #468165;
+	color:white;
+	cursor:pointer;
+}
+
+/* Animal Scroll-Box */
+
+#animal-scrollbox {
+	max-height:550px;
+	overflow-y:scroll;
+	display:grid;
+	grid-template-columns: 33% 33% 33%;
+
+}
+
+.animal-card { 
+	background:#468165;
+	padding:2em;
+	padding-top:3em;
+	margin:1em;
+	border-radius: 0px 0px 30px 0px;
+}
+
+.image-circle {
+	 border-radius: 50%;
+	 height: 200px;
+	 width: 200px;
+	 overflow: hidden;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 margin-bottom:2em;
+	 align-items:center;
+}
+
+.image-circle img {
+	min-width:0;
+	width:100%;
+}
+
+/* News Page Divs */
+.news-div {
+	background:#468165;
+	padding:2em;
+	border-radius: 0px 0px 30px 0px;
+	color:white;
+	margin:2em;
+}
+
+.news-title a:link, .news-title a:active, .news-title a:visited {
+	text-decoration:none;
+	color:white;
+	font-family:'Domine', Georgia, Times New Roman, serif;
+	font-size:2em;
+}
+
+
+.news-div a:link, .news-div a:active, .news-div a:visited {
+	text-decoration:none;
+	color:#1A1A1A;
+	font-weight:700;
+}
+
+.news-div a:hover {
+	color:#5D1C9E;
+	background:none;
+}
+
+/* Smaller Screen Media Query */
+@media only screen and (max-width:320px) {
+	#nav-bar {
+		font-size: 0.75em;
+	}
+}
+
+@media only screen and (max-width:660px) {
+	#container {
+		margin: 0 auto;
+	}
+	#top-bar, #nav-bar  {
+		grid-template-columns:100%;
+	}
+	#nav-bar {
+		left: 0;
+		right: 0;
+	}
+	#side-bar, #nav-space {
+		display:none;
+	}
+	#title {
+		display:none;
+	}
+	#title2 {
+		display:block;
+	}
+	.radio-container {
+		display:block;
+	}
+	#ticket-form .button {
+		margin:.05em;
+	}
+	#short-header, #short-header-2{
+		height:200px;
+	}
+	.short-credit {
+		height:200px;
+		font-size:0.8em;
+	}
+	#animal-scrollbox {
+		margin:2em;
+	}
+	.image-circle {
+		height:150px;
+		width:150px;
+	}
+
+}
+
+
+@media only screen and (max-width:1000px) {
+	#ticket-form, #price-map-wrap {
+		grid-template-columns: 100%;
+	}
+	#map-download {
+		text-align:center;
+	}
+	#map-download .button{
+		text-size:0.8em;
+	}
+	#pricing {
+		margin: 0 auto;
+	}
+}
+
+@media only screen and (max-width:1200px) {
+	#animal-scrollbox {
+		grid-template-columns:100%
+	}
+}
+
+
+/* Larger Screen Media Query */
+@media only screen and (min-width:1400px) {
+	body {
+		font-size: 1.2em;
+	}
+	#nav-bar{
+		font-size:1.4em;
+	}
+	#ticket-form {
+		font-size:1.2em;
+	}
+	#ticket-form .button {
+		font-size:.8em;
+	}
+	#order-information input {
+		font-size:1.2em;
+	}
+}
+
